@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import messagebox
-from encrypt_pass import EncryptPassWindow
 
 #
 def perform_login():
@@ -11,7 +10,6 @@ def perform_login():
     #
     if username == CORRECT_LOGIN and password == CORRECT_PASSWORD and encryption_password == CORRECT_ENCRYPTION_PASSWORD:
         messagebox.showinfo("Success", "Login Successful!")
-        open_encrypt_pass_window()
     #
     else:
         messagebox.showerror("Error", "Incorrect username or password!")
@@ -19,7 +17,6 @@ def perform_login():
 #
 def open_encrypt_pass_window():
     root.destroy()
-    EncryptPassWindow().mainloop()
 
 #
 CORRECT_LOGIN = "admin"
