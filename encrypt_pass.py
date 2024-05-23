@@ -2,21 +2,21 @@ import tkinter as tk
 from tkinter import ttk
 import sqlite3
 
-# Conectar ao banco de dados SQLite
+#
 conn = sqlite3.connect('logins.db')
 c = conn.cursor()
 
-# Criar tabela para armazenar os logins se não existir
+#
 c.execute('''CREATE TABLE IF NOT EXISTS logins
              (email TEXT, senha TEXT, site TEXT)''')
 
-# Função para adicionar um novo login ao banco de dados
+#
 def add_login():
     add_login_window = tk.Toplevel()
     add_login_window.title("Add Login")
     add_login_window.iconbitmap("img/criptografia-de-dados.ico")
     add_login_window.geometry("300x200")
-
+    
     #
     label_email = tk.Label(add_login_window, text="Email:")
     label_email.pack()
@@ -50,7 +50,7 @@ def add_login():
     btn_save = tk.Button(add_login_window, text="Save", command=save_login)
     btn_save.pack()
 
-# Função para excluir um login selecionado na Treeview e no banco de dados
+#
 def delete_login():
     selected_item = tree.selection()
     if selected_item:
@@ -61,7 +61,7 @@ def delete_login():
         conn.commit()
         update_login_view()
 
-# Função para carregar logins do banco de dados e atualizar a visualização
+#
 def load_logins_from_db():
     c.execute("SELECT * FROM logins")
     rows = c.fetchall()
@@ -69,7 +69,7 @@ def load_logins_from_db():
         logins.append({"email": row[0], "senha": row[1], "site": row[2]})
     update_login_view()
 
-# Função para atualizar a visualização dos logins na Treeview
+#
 def update_login_view():
     for record in tree.get_children():
         tree.delete(record)
@@ -103,13 +103,12 @@ btn_add.pack(side=tk.LEFT)
 btn_delete = tk.Button(encrypt_pass, text="Delete Login", command=delete_login)
 btn_delete.pack(side=tk.LEFT)
 
-# Lista para armazenar os logins temporariamente
+#
 logins = []
 
-# Carregar logins do banco de dados e atualizar a visualização
+#
 load_logins_from_db()
-
 encrypt_pass.mainloop()
 
-# Fechar a conexão com o banco de dados quando o programa terminar
+#
 conn.close()
