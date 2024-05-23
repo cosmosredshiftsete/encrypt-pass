@@ -1,6 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
-from add_login_screen import *
+import sqlite3
+
+#
+conn = sqlite3.connect('logins.db')
+c = conn.cursor()
+
+#
+c.execute('''CREATE TABLE IF NOT EXISTS logins
+          (email TEXT, senha TEXT, site TEXT)''')
 
 #
 def add_login():
