@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from add_login_screen import *
 
 #
 def add_login():
@@ -12,6 +13,7 @@ def delete_login():
 #
 encrypt_pass = tk.Tk()
 encrypt_pass.title("Encrypt Pass")
+encrypt_pass.iconbitmap("img/criptografia-de-dados.ico")
 
 #
 tree = ttk.Treeview(encrypt_pass)
