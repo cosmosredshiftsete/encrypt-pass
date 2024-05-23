@@ -10,13 +10,10 @@ def perform_login():
     #
     if username == CORRECT_LOGIN and password == CORRECT_PASSWORD and encryption_password == CORRECT_ENCRYPTION_PASSWORD:
         messagebox.showinfo("Success", "Login Successful!")
+        
     #
     else:
         messagebox.showerror("Error", "Incorrect username or password!")
-
-#
-def open_encrypt_pass_window():
-    root.destroy()
 
 #
 CORRECT_LOGIN = "admin"
@@ -55,4 +52,5 @@ button_login = tk.Button(root, text="Login", command=perform_login)
 button_login.place(x=150, y=200)
 button_login.pack()
 
+#
 root.mainloop()
