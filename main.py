@@ -9,7 +9,7 @@ def fazer_login():
 root = tk.Tk()
 root.title("Login")
 root.geometry("400x200")
-root.iconbitmap("img/criptografia-de-dados.png")  # Definindo as dimensões da janela
+root.iconbitmap("img/criptografia-de-dados.ico")  # Definindo as dimensões da janela
 
 # Criando os widgets
 label_login = tk.Label(root, text="Login:")
