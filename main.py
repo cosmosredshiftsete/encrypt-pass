@@ -39,8 +39,8 @@ def perform_login():
         and encryption_password == CORRECT_ENCRYPTION_PASSWORD
     ):
         messagebox.showinfo("Success", "Login Successful!")
-        root.destroy()  # Se o login for bem sucedido, fecha a janela de login
-        main_screen()  # Abre a janela principal
+        root.destroy()  # if login have a been successful, close the login
+        main_screen()  # open the main window
     else:
         messagebox.showerror("Error", "Incorrect username or password!")
 
