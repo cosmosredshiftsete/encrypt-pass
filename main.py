@@ -4,9 +4,9 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 
 # SETTINGS
-CORRECT_LOGIN = "admin"
-CORRECT_PASSWORD = "Nala00110111#"
-CORRECT_ENCRYPTION_PASSWORD = "8181160"
+CORRECT_LOGIN = "admin" # u can change the login if u want!
+CORRECT_PASSWORD = "Nala00110111#" # u can change the passwd if u want!
+CORRECT_ENCRYPTION_PASSWORD = "8181160" # u can change the enc. passwd if u want!
 
 # DATABASE
 connection = sqlite3.connect("logins.db")
