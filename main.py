@@ -145,32 +145,33 @@ def update_login_view():
         tree.insert("", "end", text=str(idx), values=(email, senha, site))
 
 
-# WINDOW
-root = tk.Tk()
-root.title("Login Screen")
-root.geometry("400x190")
-set_screen_icon(root)
+if __name__ == "__main__":
+    # WINDOW
+    root = tk.Tk()
+    root.title("Login Screen")
+    root.geometry("400x190")
+    set_screen_icon(root)
 
-label_username = tk.Label(root, text="Username: ")
-label_username.place(x=50, y=50)
-label_username.pack()
-entry_username = tk.Entry(root)
-entry_username.pack()
+    label_username = tk.Label(root, text="Username: ")
+    label_username.place(x=50, y=50)
+    label_username.pack()
+    entry_username = tk.Entry(root)
+    entry_username.pack()
 
-label_auth_password = tk.Label(root, text="Pass:")
-label_auth_password.place(x=50, y=100)
-label_auth_password.pack()
-entry_auth_password = tk.Entry(root, show="*")
-entry_auth_password.pack()
+    label_auth_password = tk.Label(root, text="Pass:")
+    label_auth_password.place(x=50, y=100)
+    label_auth_password.pack()
+    entry_auth_password = tk.Entry(root, show="*")
+    entry_auth_password.pack()
 
-label_encryption_password = tk.Label(root, text="Encryption Pass")
-label_encryption_password.place(x=50, y=150)
-label_encryption_password.pack()
-entry_encryption_password = tk.Entry(root, show="*")
-entry_encryption_password.pack()
+    label_encryption_password = tk.Label(root, text="Encryption Pass")
+    label_encryption_password.place(x=50, y=150)
+    label_encryption_password.pack()
+    entry_encryption_password = tk.Entry(root, show="*")
+    entry_encryption_password.pack()
 
-button_login = tk.Button(root, text="Login", command=perform_login)
-button_login.place(x=150, y=200)
-button_login.pack(pady=10)
+    button_login = tk.Button(root, text="Login", command=perform_login)
+    button_login.place(x=150, y=200)
+    button_login.pack(pady=10)
 
-root.mainloop()
+    root.mainloop()
