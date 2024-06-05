@@ -14,6 +14,5 @@
 
 | ideas |
 |----------|
-| make exe |
-|----------|
+|        make exe        |
 | Implement cryptography |
