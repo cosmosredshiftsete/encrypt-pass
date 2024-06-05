@@ -10,15 +10,14 @@
 
 
 ## Windows:
-
 ![alt text](img/Login_Screen_and_Success.png)
 
 ![alt text](img/Encrypt_Pass_and_Add_Login.png)
+##
 
 
-###
 |          IDEAS         | UPDATES |
 |------------------------|---------| 
 |        make exe        |   Soon  |
 | Implement cryptography |   Soon  |
-###
+##
